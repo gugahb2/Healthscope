@@ -1,0 +1,127 @@
+@import '../../styles/colours';
+@import '../../styles/breakpoints';
+
+.container_type1 {
+  display: block;
+  padding-top: 60px;
+  padding-bottom: 56px;
+  color: $white;
+
+  @include mq('md') {
+    display: flex;
+    grid-template-columns: 5fr 6fr;
+    // column-gap: 33px;
+    padding-top: 52px;
+    padding-bottom: 58px;
+  }
+  .heading_box {
+    @include mq('md') {
+      width: 45.5%;
+      padding-right: 12px;
+    }   
+  }
+  .description_box {
+    @include mq('md') {
+      width: 54.5%;
+      padding-left: 12px;
+    }   
+  }
+
+  .text_heading_type1 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 100%;
+    padding-bottom: 24px;
+
+    @include mq('md') {
+      font-size: 48px;
+    }
+  }
+
+  .description_wrapper_type1 {
+    display: block;
+  }
+}
+
+.container_type2 {
+  display: block;
+  padding-top: 298px;
+  min-height: 930px;
+  color: $white;
+
+  @include mq('md') {
+    max-width: 650px;
+    padding-top: 90px;
+    min-height: 718px;
+  }
+  @include mq('lg'){
+    max-width: 650px;
+    padding-top: 90px;
+    min-height: 762px;
+  }
+  @include mq('xl'){
+    max-width: 650px;
+    padding-top: 90px;
+    min-height: 800px;
+  }
+  @include mq('xxl'){
+    max-width: 650px;
+    padding-top: 90px;
+    min-height: 880px;
+  }
+
+  .text_heading_type2 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 100%;
+    padding-bottom: 16px;
+
+    @include mq('md') {
+      font-size: 64px;
+    }
+  }
+
+  .description_wrapper_type2 {
+    display: block;
+
+    @include mq('md') {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 32px;
+    }
+  }
+}
+
+.sub-heading-text {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 22px;
+  padding: 12px 0;
+
+  @include mq('md') {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.intro_text {
+  grid-column: 1/3;
+  color: rgba($white, 0.7);
+  padding: 0;
+  margin-bottom: 9px;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
+  display: none;
+  @include mq('md'){
+    display: block;
+  }
+}

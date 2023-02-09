@@ -1,0 +1,47 @@
+@import '../../styles/_colours.scss';
+@import '../../styles/breakpoints';
+
+.root {
+  padding: 48px 0 28px;
+  @include mq('md') {
+    padding: 72px 0;
+  }
+  @media print {
+    padding: 48px 0;
+  }
+  .content {
+    display: block;
+    @include mq('lg') {
+      display: grid;
+      grid-template-columns: 2fr 7fr;
+    }
+    @media print {
+      display: grid;
+      grid-template-columns: 2fr 7fr;
+    }
+    .heading {
+      font-family: Rubik;
+      color: $primary-dark;
+      margin-bottom: 24px;
+      line-height: 28px;
+      @include mq('md') {
+        font-size: 32px;
+        line-height: 38px;
+      }
+      @media print {
+        font-size: 22px;
+        line-height: 28px;
+      }
+    }
+    .items {
+      @include mq('md') {
+        display: flex;
+        justify-content: center;
+      }
+      @media print {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}

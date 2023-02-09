@@ -1,0 +1,32 @@
+@import '../../styles/_colours.scss';
+@import '../../styles/breakpoints';
+
+.root {
+  .container {
+    background-color: $primary-dark;
+    border-radius: 4px;
+    padding: 10px 20px;
+
+    @include mq('md') {
+      padding: 16px 20px;
+    }
+    @include mq('lg') {
+      padding: 16px 24px;
+    }
+
+    .form-control {
+      color: $primary-dark;
+      margin-bottom: 10px;
+      @include mq('md') {
+        margin-bottom: 0;
+      }
+      label {
+        color: $white;
+      }
+    }
+    .sort_by {
+      max-width: 154px;
+      margin-left: auto;
+    }
+  }
+}

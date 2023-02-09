@@ -1,0 +1,38 @@
+@import '../../styles/_colours.scss';
+@import '../../styles/breakpoints';
+
+.root {
+  padding: 56px 23px;
+  background-color: $grey-warm;
+
+  @include mq('md') {
+    padding-top: 80px;
+    padding-bottom: 92px;
+  }
+
+  .container {
+    max-width: 854px;
+    margin: 0 auto;
+    .text-description {
+      font-family: Roboto;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 28px;
+      text-align: center;
+
+      @include mq('sm') {
+        font-size: 28px;
+        line-height: 40px;
+      }
+    }
+
+    .booking-button {
+      font-family: Fira Sans;
+      width: 243px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

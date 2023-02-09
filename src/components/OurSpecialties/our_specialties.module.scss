@@ -1,0 +1,135 @@
+@import '../../styles/_colours.scss';
+@import '../../styles/breakpoints';
+
+.root {
+  padding-top: 24px;
+  padding-bottom: 50px;
+  @include mq('md') {
+    padding-bottom: 114px;
+  }
+  .heading {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 24px;
+    @include mq('md') {
+      font-size: 32px;
+      line-height: 38px;
+      margin-bottom: 16px;
+    }
+  }
+  .description {
+    max-width: 650px;
+    margin-bottom: 32px;
+    display: none;
+    @include mq('md') {
+      display: block;
+    }
+  }
+  .slider {
+    font-family: Fira Sans;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 50px;
+    overflow: hidden;
+    @include mq('md') {
+      padding-bottom: 0;
+      overflow: unset;
+    }
+    .dots {
+      display: flex!important;
+      justify-content: center;
+      bottom: -34px;
+      margin: 0 -20px;
+      width: 100vw;
+      overflow: auto;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      @include mq('md') {
+        bottom: -50px;
+        width: 100%;
+        margin: 0;
+      }
+      button::before {
+        font-size: 8px;
+        color: $white;
+        opacity: 1;
+        @include mq('md') {
+          font-size: 12px;
+        }
+      }
+      :global(.slick-active) {
+        button::before {
+          color: $primary-tiffany;
+        }
+      }
+    }
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 48px;
+      padding: 12px;
+      font-size: 24px;
+      color: #000;
+      opacity: 0.5;
+      background-color: $grey-cool;
+      border-radius: 48px;
+      z-index: 1;
+      cursor: pointer;
+      display: none !important;
+      @include mq('md') {
+        display: block !important;
+      }
+      &.prev {
+        left: -43px;
+      }
+      &.next {
+        right: -43px;
+      }
+    }
+    :global(.slick-list) {
+      margin-right: -24px;
+      overflow: visible;
+      @include mq('md') {
+        overflow: hidden;
+      }
+    }
+  }
+  .card {
+    height: 250px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $white;
+    border: 1px solid $border-light;
+    border-radius: 4px;
+    box-shadow: 0px 4px 12px $shadow;
+    margin-right: 24px;
+    &_title {
+      margin-bottom: 12px;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    &_content {
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-bottom: 36px;
+    }
+    &_btn {
+      display: block;
+      padding: 6px 24px;
+      background-color: $primary-cerulean;
+      color: $white;
+      text-align: center;
+      border-radius: 36px;
+    }
+  }
+}

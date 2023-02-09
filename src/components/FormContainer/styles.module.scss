@@ -1,0 +1,98 @@
+@import '../../styles/_colours.scss';
+@import '../../styles/breakpoints';
+
+.form_control {
+  border: 1px solid $border-color;
+  width: 100%;
+  border-radius: 4px;
+  padding: 14px 10px;
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $grey;
+  outline: none;
+
+  @include mq('md') {
+    padding: 14px 16px;
+    font-size: 18px;
+    line-height: 21.6px;
+  }
+}
+.form_label {
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 4px 0;
+  color: $primary-dark;
+}
+.default_label {
+  color: $grey;
+}
+.wrapper {
+  position: relative;
+  &::after {
+    font: normal normal normal 10px/1 Hsicons;
+    position: absolute;
+    content: '\f003';
+    right: 12px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 64px;
+    height: 100%;
+    content: '';
+    pointer-events: none;
+  }
+  select {
+    width: 100%;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  select::-ms-expand {
+    display: none;
+  }
+}
+
+.button {
+  border-radius: 100px;
+  text-align: center;
+  background-color: $primary-dark;
+  color: $white;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  height: 38px;
+  width: 172px;
+  outline: none!important;
+}
+
+.icon {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
+  @include mq('md') {
+    top: 15px;
+  }
+}
+
+.formContent {
+  margin-right: 0;
+  @include mq('md') {
+    margin-right: 20px;
+  }
+}

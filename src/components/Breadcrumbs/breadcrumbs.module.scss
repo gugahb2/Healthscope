@@ -1,0 +1,25 @@
+@import '../../styles/_colours.scss';
+@import '../../styles/breakpoints';
+
+.breadCrumbs {
+  width: 100%;
+  display: none;
+  font-family: Roboto;
+  font-style: normal;
+  color: $white;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+  @include mq('md'){
+    display: flex;
+  }
+}
+.breadCrumb_item {
+  text-transform: capitalize;
+  padding: 4px;
+}
+.bread_crums_list {
+  display: flex;
+  font-family: Roboto;
+}

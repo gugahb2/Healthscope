@@ -1,0 +1,96 @@
+@import '../../styles/_colours.scss';
+@import '../../styles/breakpoints';
+
+.root {
+  background-color: $white;
+  border-radius: 13px;
+  overflow: hidden;
+  font-family: Roboto;
+  margin-bottom: 20px;
+  @include mq('md') {
+    width: 100%;
+    max-width: 284px;
+    margin: 0 8px;
+  }
+  .map_wrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 80%;
+    background-color: $yellow;
+    @include mq('md') {
+      padding-bottom: 56.25%;
+    }
+    .map {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .content {
+    padding: 16px 20px;
+    @include mq('md') {
+      padding: 10px 16px 30px;
+    }
+    .phones {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+      border-top: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
+      color: $primary-dark;
+      & > div {
+        padding: 10px 0;
+      }
+      & > div:first-child {
+        border-right: 1px solid $border-color;
+      }
+      & > div:last-child {
+        margin-left: 12px;
+      }
+      i {
+        font-size: 20px;
+        margin-right: 5px;
+      }
+      span {
+        font-size: 12px;
+        line-height: 14px;
+        padding-right: 4px;
+      }
+    }
+    .hs_name {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 20px;
+      color: $black;
+    }
+    .address_content {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+    }
+    .address_label {
+      font-size: 9px;
+      line-height: 10px;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+      color: $grey;
+    }
+  }
+  &:global(.horizontal) {
+    @include mq('md') {
+      display: flex;
+      flex-direction: row-reverse;
+      max-width: 634px;
+      .map_wrapper {
+        width: 50%;
+      }
+      .content {
+        width: 50%;
+        padding: 30px 20px;
+      }
+    }
+  }
+}

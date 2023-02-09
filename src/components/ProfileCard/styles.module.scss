@@ -1,0 +1,116 @@
+@import '../../styles/colours.scss';
+@import '../../styles/breakpoints';
+
+.profile__card {
+  padding: 24px 20px;
+  border-radius: 16px;
+  box-shadow: $box-shadow;
+  background-color: $white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  overflow: hidden;
+  .waveBg {
+    position: absolute;
+    top: -62px;
+    left: -40px;
+    right: -5px;
+    @include mq('sm') {
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      transform: translateX(0%) translateY(-20%) scale(1);
+    }
+  }
+
+  .avatar {
+    position: relative;
+    max-width: 100px;
+    margin: auto;
+    width: 100%;
+    .avatarImage {
+      position: absolute;
+      height: 0;
+      width: 100%;
+      padding-bottom: 100%;
+      border-radius: 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    @include mq('md') {
+      max-width: 170px;
+    }
+  }
+
+  .description {
+    padding: 16px;
+    padding-top: 123px;
+    @include mq('md') {
+      padding-top: 200px;
+    }
+    text-align: center;
+    > h4 {
+      letter-spacing: -0.01em;
+      color: $primary-aqua;
+      text-transform: uppercase;
+    }
+
+    > p {
+      font-size: 10px;
+      line-height: 1.2;
+      color: $grey-charcoal;
+      padding: 6px;
+    }
+  }
+
+  .table {
+    border-bottom: 1px solid $border-color;
+    margin-bottom: 20px;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    .space1 {
+      padding-top: 14px;
+      padding-bottom: 14px;
+      overflow: auto;
+    }
+    .space2 {
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
+
+    > li {
+      border-top: 1px solid $border-color;
+      label {
+        font-family: Roboto;
+        text-transform: uppercase;
+        color: $grey;
+        font-size: 10px;
+        line-height: 12px;
+      }
+
+      p {
+        font-family: Fira Sans;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        color: $black;
+      }
+
+      i {
+        font-size: 24px;
+        line-height: 28px;
+        margin-right: 10px;
+        color: $primary-dark;
+      }
+
+      :global(.border-right) {
+        border-right: 1px solid $border-color;
+      }
+    }
+  }
+}

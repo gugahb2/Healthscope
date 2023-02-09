@@ -1,0 +1,145 @@
+@import '../../styles/_colours.scss';
+@import '../../styles/breakpoints';
+
+.root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  // height: 1400px;
+  overflow: hidden;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  .container {
+    position: relative;
+    overflow: hidden;
+    height: 1000px;
+    @include mq('md'){
+      height: 890px;
+    }
+    @include mq('lg'){
+      height: 950px;
+    }
+    @include mq('xl'){
+      height: 1000px;
+    }
+    @include mq('xxl'){
+      height: 1100px;
+    }
+    &.hightType0 {
+      height: 650px;
+      @include mq('md'){
+        height: 840px;
+      }
+      @include mq('lg'){
+        height: 900px;
+      }
+      @include mq('xl'){
+        height: 950px;
+      }
+      @include mq('xxl'){
+        height: 1050px;
+      }
+    }
+  }
+  .backdrop {
+    width: 100%;
+    height: 300px;
+    background-color: $bottom-wave;
+  }
+  .main_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: $primary-cerulean;
+    opacity: 0.9;
+    z-index: -1;
+  }
+
+  .gradient_bg {
+    z-index: -1;
+    position: absolute;
+    opacity: 1;
+    transform: translateX(-35%) translateY(20%) scale(1.8);
+    background: $cerulean-gradient;
+    @include mq('md') {
+      opacity: 0.8;
+      transform: scale(1.1);
+    }
+  }
+
+  .image_box {
+    position: relative;
+    width: 150%;
+    max-width: 945px;
+    padding-bottom: 80%;
+    margin-left: -25%;
+    margin-top: -10%;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+    .image {
+      border-radius: 100%;
+      width: 100% !important;
+      max-width: 945px !important;
+      max-height: 945px !important;
+      min-width: 0 !important;
+      min-height: 0 !important;
+      height: 100% !important;
+      margin-left: 0;
+      @include mq('md') {
+        margin-left: 40%;
+      }
+      @include mq('xxxxl') {
+        margin-left: 200px;
+      }
+    }
+    @include mq('md') {
+      position: absolute;
+      right: -10%;
+      top: 10%;
+      width: 50%;
+      padding-bottom: 50%;
+      margin: auto;
+    }
+    @include mq('xxxxl') {
+      position: absolute;
+      right: -100px;
+      top: 80px;
+      width: 945px !important;
+      padding-bottom: 945px;
+      margin: auto;
+    }
+  }
+
+  .bottom_bg {
+    position: absolute;
+    transform: scale(1.4, -1.4);
+    background-color: $bottom-wave;
+    z-index: -1;
+    bottom: 0;
+    top: auto;
+    @include mq('md') {
+      transform: scale(1.1, -1.1);
+    }
+    @include mq('xxxxl') {
+      transform: scale(1.1, -1.1);
+      bottom: -30px;
+    }
+  }
+
+  .section {
+    max-width: 100%;
+    padding-top: 47px;
+    padding-bottom: 47px;
+
+    @include mq('md') {
+      max-width: 50%;
+      padding-top: 196px;
+      padding-bottom: 100px;
+    }
+  }
+}

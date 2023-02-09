@@ -1,0 +1,44 @@
+@import '../../styles/colours';
+@import '../../styles/breakpoints';
+
+.footer {
+  padding: 44px 0 0;
+  @include mq('md') {
+    padding: 56px 0 121px;
+  }
+  .footer_logo {
+    position: relative;
+    width: 200px;
+    height: 40px;
+    margin-bottom: 56px;
+    @include mq('lg') {
+      width: 222px;
+      height: 44px;
+    }
+  }
+  .footer_group {
+    @include mq('md') {
+      margin-top: -3px;
+    }
+  }
+  .footer_menu {
+    margin-bottom: 72px;
+    @include mq('md') {
+      margin-bottom: 0;
+    }
+    &_heading {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.4;
+      letter-spacing: -0.03em;
+    }
+    &_link {
+      color: $light;
+    }
+  }
+}
+.footer_reserved {
+  padding: 14px 0;
+}

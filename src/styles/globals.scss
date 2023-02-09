@@ -1,0 +1,134 @@
+@import './_colours.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+// sections container
+.section-container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: Fira Sans;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  @media only screen and (min-width: 768px) {
+    padding-left: 58px;
+    padding-right: 108px;
+  }
+}
+
+// backgrounds
+.bg-white {
+  background-color: $white !important;
+  color: $black;
+}
+.bg-cerulean {
+  background-color: $primary-cerulean !important;
+  color: $white;
+}
+.bg-teal {
+  background-color: $teal !important;
+  color: $white;
+}
+.bg-light {
+  background-color: $primary-light !important;
+  color: $black;
+}
+.bg-dark {
+  background-color: $primary-dark !important;
+  color: $white;
+}
+.bg-wave {
+  background-color: $bottom-wave !important;
+  color: $white;
+}
+
+// text colours
+.text-tiffany {
+  color: $primary-tiffany;
+}
+.text-dark {
+  color: $primary-dark;
+}
+.text-aqua {
+  color: $primary-aqua;
+}
+.text-charcoal {
+  color: $grey-charcoal;
+}
+
+// paragraph
+.text-heading-lg {
+  font-family: Rubik;
+  font-weight: 500;
+  font-size: 72px;
+  line-height: 1;
+}
+
+.text-heading-1 {
+  font-family: Rubik;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 1;
+}
+
+.text-heading-3 {
+  font-family: Rubik;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.3;
+}
+
+.text-heading-4 {
+  font-family: Rubik;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.text-heading-light {
+  font-family: Rubik;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.text-body {
+  font-family: Fira Sans;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.text-breadcrumb {
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+}
+
+.font-rubik {
+  font-family: 'Rubik' !important;
+}

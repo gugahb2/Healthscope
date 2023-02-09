@@ -1,0 +1,77 @@
+@import '../../styles/_colours.scss';
+@import '../../styles/breakpoints';
+
+.root {
+  position: relative;
+  padding-top: 40px;
+  @include mq('md') {
+    padding-top: 73px;
+  }
+  .heading_wrapper {
+    max-width: 654px;
+    .heading {
+      color: $primary-dark;
+      font-weight: 500;
+      line-height: 120%;
+      font-size: 24px;
+    }
+    .description {
+      margin-top: 16px;
+      margin-bottom: 32px;
+      display: none;
+      font-size: 14px;
+      line-height: 20px;
+      color: $black;
+      @include mq('md') {
+        display: block;
+      }
+    }
+  }
+
+  .container {
+    background-color: $primary-dark;
+    border-radius: 4px;
+    padding: 12px 20px 20px;
+    column-gap: 50px;
+    row-gap: 10px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+
+    @include mq('md') {
+      padding: 11px 20px 16px;
+      position: relative;
+      column-gap: 20px;
+    }
+    @include mq('lg') {
+      padding: 11px 32px 16px;
+      position: relative;
+      column-gap: 50px;
+    }
+
+    .form-control {
+      color: $primary-dark;
+      label {
+        color: $white;
+      }
+    }
+  }
+
+  .filter_control {
+    width: 48px;
+    height: 48px;
+    background-color: $primary-dark;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border-radius: 4px;
+    margin: 4px 0px;
+    cursor: pointer;
+
+    @include mq('md') {
+      display: none;
+    }
+  }
+}

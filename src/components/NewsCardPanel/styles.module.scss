@@ -1,0 +1,141 @@
+@import '../../styles/_colours.scss';
+@import '../../styles/breakpoints';
+
+.container {
+  width: 100%;
+  padding-top: 56px;
+  padding-bottom: 18px;
+  background-color: $grey-light;
+
+  @include mq('md') {
+    padding-top: 72px;
+    padding-bottom: 75px;
+  }
+
+  .card_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .title {
+      color: $primary-dark;
+      font-family: Rubik;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 120%;
+
+      @include mq('md') {
+        color: $primary-cerulean;
+        font-size: 32px;
+      }
+    }
+    .text_all_news {
+      color: $primary-cerulean;
+      padding: 0;
+      font-family: Rubik;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 25px;
+      text-decoration: underline;
+
+      @include mq('md') {
+        color: $primary-cerulean;
+        padding: 0 66px;
+        font-size: 22px;
+        line-height: 28px;
+      }
+    }
+  }
+  .panel_pc {
+    width: 100%;
+    padding: 16px 0;
+    margin: 0 auto;
+    display: none;
+
+    @include mq('md') {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 25px;
+    }
+
+    @include mq('lg') {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  .panel_mobile {
+    display: block;
+    padding: 20px 20px 50px 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+    overflow: hidden;
+
+    @include mq('md') {
+      display: none;
+    }
+
+    .dots {
+      display: flex!important;
+      justify-content: center;
+      bottom: -34px;
+      margin: 0 -20px;
+      width: 100vw;
+      overflow: auto;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      @include mq('md') {
+        bottom: -50px;
+        width: 100%;
+        margin: 0;
+      }
+      button::before {
+        font-size: 8px;
+        color: $dot-inactive;
+        opacity: 1;
+        @include mq('md') {
+          font-size: 12px;
+        }
+      }
+      :global(.slick-active) {
+        button::before {
+          color: $primary-tiffany;
+        }
+      }
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 48px;
+      padding: 12px;
+      font-size: 24px;
+      color: #000;
+      opacity: 0.5;
+      background-color: $grey-cool;
+      border-radius: 48px;
+      z-index: 1;
+      cursor: pointer;
+      display: none !important;
+      @include mq('md') {
+        display: block !important;
+      }
+      &.prev {
+        left: -43px;
+      }
+      &.next {
+        right: -43px;
+      }
+    }
+    :global(.slick-list) {
+      margin-right: -24px;
+      overflow: visible;
+      @include mq('md') {
+        overflow: hidden;
+      }
+    }
+  }
+}

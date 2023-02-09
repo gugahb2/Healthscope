@@ -1,0 +1,39 @@
+@import '../../styles/_colours.scss';
+@import '../../styles/breakpoints';
+
+.container {
+  padding: 40px 0 56px;
+
+  @include mq('md') {
+    padding: 32px 0 72px;
+  }
+
+  .card__container {
+    margin-left: 0;
+    margin-right: 0;
+    @include mq('md') {
+      margin-left: -12px;
+      margin-right: -12px;  
+    }
+  }
+
+  .pagination {
+    display: block;
+    padding-top: 60px;
+    @include mq('sm') {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .btnPaginagion {
+      margin: 0 8px;
+      width: 48px;
+      height: 48px;
+      border: 1px solid $border-color;
+      border-radius: 4px;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+}

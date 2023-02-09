@@ -1,0 +1,67 @@
+@import '../../styles/_colours.scss';
+@import '../../styles/breakpoints';
+
+.root {
+  label {
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 8px;
+    margin-bottom: 4px;
+    font-weight: 400;
+  }
+  select {
+    padding: 8px 32px 8px 10px;
+    font-size: 16px;
+    line-height: 19px;
+    width: 100%;
+    border-radius: 4px;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    @include mq('sm') {
+      padding: 10px 32px 10px 12px;
+    }
+    option {
+      font-family: 'Fira Sans', sans-serif;
+    }
+  }
+  select::-ms-expand {
+    display: none;
+  }
+  .wrapper {
+    position: relative;
+    &::after {
+      font: normal normal normal 10px/1 Hsicons;
+      position: absolute;
+      content: '\f003';
+      right: 12px;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      pointer-events: none;
+    }
+    // Cause other styling issues
+    // &::before {
+    //   position: absolute;
+    //   top: 0;
+    //   right: 0;
+    //   width: 64px;
+    //   height: 100%;
+    //   content: '';
+    //   background: linear-gradient(to right, transparent, $white);
+    //   pointer-events: none;
+    // }
+  }
+  .borderType {
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+    @include mq('sm') {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+}

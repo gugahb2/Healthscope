@@ -1,0 +1,32 @@
+@import '../../styles/_colours.scss';
+@import '../../styles/breakpoints';
+
+.root {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+	top: 0;
+	right: 0;
+  background-color: $primary-cerulean;
+
+  &.wave1 {
+    padding-bottom: 40%;
+    mask: url('wave1.svg');
+    -webkit-mask: url('wave1.svg');
+  }
+
+  &.wave2 {
+    padding-bottom: 18.2%;
+    mask: url('wave2.svg');
+    -webkit-mask: url('wave2.svg');
+  }
+
+  &.waveMask {
+    mask-repeat: no-repeat;
+    mask-position: 0;
+    mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: 0;
+    -webkit-mask-size: cover;
+  }
+}

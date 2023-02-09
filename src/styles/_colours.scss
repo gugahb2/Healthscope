@@ -1,0 +1,36 @@
+$primary-tiffany: #64ccc9;
+$primary-aqua: #009ca6;
+$primary-cerulean: #165c7d;
+$primary-dark: #123643;
+$primary-light: #ddf1f3;
+
+$grey-charcoal: #545859;
+$grey-cool: #d9d9d6;
+$grey-light: #fbfbfb;
+$grey-silver: #c4c4c4;
+$grey-warm: #efeeee;
+
+$black: #000000;
+$white: #ffffff;
+$red: #e40046;
+$amber: #e87722;
+$yellow: #f4af23;
+$apple: #86ad3f;
+$blush: #c48490;
+$teal: #0599a8;
+$light: #c3e8ea;
+$grey: #6d6d6d;
+$heading: #2d6c8a;
+
+$cerulean-gradient: linear-gradient(60.51deg, $primary-cerulean 0%,  rgba($primary-cerulean, 0.7) 50% , rgba($primary-cerulean, 0.1) 100%);
+$cerulean-dark-gradient: linear-gradient(60.51deg, $primary-cerulean 0%,  rgba($primary-cerulean, 0.8) 100%);
+$tiffany-gradient: linear-gradient(60.51deg, $primary-tiffany 0%,  rgba($primary-tiffany, 0.7) 40% , rgba($primary-tiffany, 0) 100%);
+$grey-gradient: linear-gradient(120deg, $grey-silver -10%, rgba($grey-silver, 0.6) 50%, rgba($grey-silver, 0) 90%);
+$tiffany-opacity: rgba(100, 204, 201, 0.1);
+$dot-inactive: #c4c4c4;
+
+$shadow: rgba($black, 0.1);
+$border-light: #fbfbfb;
+$border-color: #e5e5e5;
+$box-shadow: 0 4px 10px rgba($black, 0.11);
+$bottom-wave: #12485d;

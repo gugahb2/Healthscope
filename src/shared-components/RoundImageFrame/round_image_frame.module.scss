@@ -1,0 +1,39 @@
+@import '../../styles/colours';
+@import '../../styles/breakpoints';
+
+.root {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  .overlay_effect {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    margin-left: 50%;
+    mask-image: -webkit-gradient(
+      linear,
+      center top,
+      center bottom,
+      color-stop(10%, rgba(0, 0, 0, 1)),
+      color-stop(134%, rgba(196, 196, 916, 0))
+    );
+    -webkit-mask-image: -webkit-gradient(
+      linear,
+      center top,
+      center bottom,
+      color-stop(10%, rgba(0, 0, 0, 1)),
+      color-stop(134%, rgba(196, 196, 196, 0))
+    );
+    &::after {
+      content: ' ';
+      display: block;
+      height: 100%;
+      border: 29px solid $primary-aqua;
+      border-radius: 50%;
+      margin-left: -100%;
+      @include mq('md') {
+        border: 45px solid $primary-aqua;
+      }
+    }
+  }
+}

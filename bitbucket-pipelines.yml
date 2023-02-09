@@ -1,0 +1,10 @@
+image: node:16.4.2
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Install node modules
+          script:
+            - yarn install
+            - yarn surge

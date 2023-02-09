@@ -1,0 +1,26 @@
+@import '../../styles/_colours.scss';
+@import '../../styles/breakpoints';
+
+.root {
+  background-color: $white;
+  padding-top: 72px;
+  padding-bottom: 72px;
+  .text_header {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    @include mq('md') {
+      font-size: 22px;
+      line-height: 28px;
+    }
+  }
+  p {
+    margin-bottom: 16px;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,45 @@
+@import '../../styles/_colours.scss';
+@import '../../styles/breakpoints';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include mq('md') {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 12px;
+  }
+
+  .heading {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 120%;
+    margin-bottom: 21px;
+    text-align: center;
+    color: $white;
+
+    @include mq('md') {
+      font-size: 32px;
+      text-align: left;
+      margin-bottom: 0;
+    }
+
+    span {
+      font-weight: 500;
+    }
+  }
+  .dropdown {
+    width: 208px;
+    border-radius: 4px;
+    outline: none;
+    color: $black;
+    label {
+      color: $white;
+    }
+  }
+}

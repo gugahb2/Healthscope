@@ -1,0 +1,70 @@
+@import '../../styles/_colours.scss';
+@import '../../styles/breakpoints';
+
+.root {
+  .text_col {
+    padding-top: 41px;
+    padding-bottom: 56px;
+    grid-row: 2;
+    @include mq('md') {
+      grid-row: 1;
+      padding-top: 72px;
+      padding-bottom: 160px;
+    }
+    h3 {
+      margin-bottom: 16px;
+      @include mq('md') {
+        margin-bottom: 21px;
+      }
+    }
+    .content {
+      font-family: Rubik;
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 25px;
+      @include mq('md') {
+        font-size: 26px;
+        line-height: 39px;
+      }
+    }
+  }
+  .image_col {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0 -20px;
+    @include mq('md') {
+      margin: auto;
+      max-width: 548px;
+    }
+  }
+  .rounded {
+    width: 338px;
+    height: 338px;
+    margin-top: -31px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: -15px;
+    @include mq('md') {
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+      margin-top: -70px;
+      margin-bottom: -70px;
+      margin-right: auto;
+    }
+    &_image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

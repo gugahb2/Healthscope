@@ -1,0 +1,57 @@
+@import '../../styles/_colours.scss';
+@import '../../styles/breakpoints';
+
+.root {
+  background-color: $primary-light;
+  padding-bottom: 72px;
+  @include mq('md') {
+    padding-bottom: 0;
+  }
+  p {
+    margin-bottom: 16px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .image_col {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0 -20px;
+    @include mq('md') {
+      margin: auto;
+      max-width: 656px;
+    }
+  }
+  .rounded {
+    width: 340px;
+    height: 340px;
+    margin-left: auto;
+    margin-top: -31px;
+    margin-right: -15px;
+    margin-bottom: 40px;
+    @include mq('md') {
+      height: 0;
+      width: 100%;
+      padding-bottom: 100%;
+      margin-top: -84px;
+      margin-bottom: -84px;
+      margin-right: 0;
+    }
+    &_image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

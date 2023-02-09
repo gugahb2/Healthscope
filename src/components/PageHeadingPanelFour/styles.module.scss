@@ -1,0 +1,68 @@
+@import '../../styles/_colours.scss';
+@import '../../styles/breakpoints';
+
+.root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+
+  .gradient_bg {
+    z-index: -1;
+    position: absolute;
+    opacity: 1;
+    transform: translateX(-35%) translateY(20%) scale(1.8);
+    background: linear-gradient(180deg, rgba(18, 72, 93, 0.7) 0%, rgba(18, 72, 93, 0) 100%);
+    @include mq('md') {
+      background-color: $bottom-wave;
+      transform: translateX(5%) translateY(15%) scale(1.3);
+    }
+    @include mq('lg') {
+      background-color: $bottom-wave;
+      transform: translateX(0) translateY(0) scale(1.1);
+    }
+    @include mq('xl') {
+      background-color: $bottom-wave;
+      transform: translateX(0) translateY(-10%) scale(1.1);
+    }
+  }
+
+  .image_box {
+    position: relative;
+    background-color: $primary-cerulean;
+    border-radius: 100%;
+    width: 150%;
+    padding-bottom: 86%;
+    margin-left: -25%;
+    margin-top: -10%;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+    @include mq('md') {
+      position: absolute;
+      background-color: $white;
+      border-radius: unset;
+      right: 0;
+      top: 15%;
+      width: 34%;
+      padding-bottom: 34%;
+      margin: auto;
+    }
+    .image {
+      border-radius: 100%;
+      width: 100%;
+      height: 100%;
+      margin-left: 0;
+      display: none!important;
+      @include mq('md') {
+        margin-left: 40%;
+        display: block!important;
+      }
+    }
+  }
+}

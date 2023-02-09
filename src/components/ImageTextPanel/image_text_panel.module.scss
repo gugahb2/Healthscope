@@ -1,0 +1,40 @@
+@import '../../styles/breakpoints';
+
+.root {
+  padding-bottom: 72px;
+  @include mq('md') {
+    padding-top: 72px;
+  }
+  .grid {
+    @include mq('md') {
+      column-gap: 52px;
+    }
+  }
+
+  .imageCol {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 300px;
+    margin-bottom: 40px;
+    margin-left: -20px;
+    margin-right: -20px;
+    @include mq('md') {
+      margin: 0;
+    }
+    .leftImage {
+      width: 100%;
+      object-fit: cover;
+      @include mq('md') {
+        object-fit: contain;
+      }
+      @include mq('xxl') {
+        object-fit: cover;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 16px;
+  }
+}

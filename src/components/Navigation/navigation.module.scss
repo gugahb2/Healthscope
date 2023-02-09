@@ -1,0 +1,291 @@
+@import '../../styles/colours';
+@import '../../styles/breakpoints';
+
+.root {
+  position: relative;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  color: $white;
+  @include mq('md') {
+    padding-top: 38px;
+    padding-bottom: 0px;
+    margin-bottom: 38px;
+  }
+  .logoBox {
+    position: absolute;
+    top: 16px;
+    left: 20px;
+    cursor: pointer;
+    @include mq('md') {
+      top: 38px;
+      left: 58px;
+    }
+    .logo {
+      height: 28px;
+      width: 142px;
+      position: relative;
+      @include mq('md') {
+        height: 38px;
+        width: 196px;
+      }
+      @include mq('lg') {
+        height: 44px;
+        width: 222px;
+      }
+    }
+  }
+  .nav_bar {
+    display: none;
+    @include mq('md') {
+      display: block;
+    }
+
+    .menu {
+      font-family: Fira Sans;
+      font-weight: 400;
+      font-size: 24px;
+      @include mq('md') {
+        font-size: 20px;
+      }
+      @include mq('lg') {
+        font-size: 24px;
+      }
+      line-height: 28px;
+      white-space: nowrap;
+      &.has_submenu .menu_item::after {
+        content: '\f006';
+        font: normal normal normal 10px/1 Hsicons;
+        display: inline-block;
+        transform: translateY(-50%);
+        margin-left: 7px;
+        font-size: 8px;
+      }
+      .menu_item {
+        margin-right: 16px;
+        margin-left: 16px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        &:hover + .megamenu_container {
+          .megamenu .megamenu_wrapper {
+            margin-right: 50px;
+            display: block;
+            &.grouped {
+              display: flex;
+            }
+          }
+        } 
+      }
+      .megamenu_container {
+        position: absolute;
+        // display: none;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        transform: translateY(100%);
+
+        font-family: Rubik;
+        font-size: 16px;
+        @include mq('md') {
+          font-size: 13px;
+        }
+        @include mq('lg') {
+          font-size: 16px;
+        }
+        line-height: 28px;
+        font-weight: 400;
+        z-index: 999;
+        
+      }
+      .megamenu {
+        width: 100%;
+        max-width: 964px;
+        margin-left: auto;
+        margin-right: auto;
+        color: $grey-charcoal;
+        &_wrapper {
+          background-color: $white;
+          padding: 40px;
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: $box-shadow;
+          display: none;
+          &.grouped {
+            padding-top: 32px;
+            padding-bottom: 32px;
+            &:hover {
+              display: flex;
+              margin-right: 50px;
+            }
+          }
+          &:hover {
+            display: block;
+            margin-right: 50px;
+          }
+        }
+        &_group {
+          background-color: $grey-light;
+          margin: -40px;
+          padding: 40px;
+          padding-right: 0;
+          margin-right: 35px;
+          @include mq('md') {
+            margin-right: 48px;
+          }
+        }
+        .heading {
+          font-size: 17px;
+          font-weight: 500;
+          color: $heading;
+          margin-bottom: 20px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+        .group_link {
+          position: relative;
+          font-size: 17px;
+          @include mq('md') {
+            font-size: 14px;
+          }
+          @include mq('lg') {
+            font-size: 17px;
+          }
+          font-weight: 500;
+          color: $heading;
+          margin-bottom: 16px;
+          cursor: pointer;
+          user-select: none;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          &:global(.active) {
+            border-bottom: 2px solid $primary-cerulean;
+            margin-right: 24px;
+            &::after {
+              content: '\f006';
+              display: inline-block;
+              font: normal normal normal 14px/1 Hsicons;
+              font-size: 8px;
+              text-rendering: auto;
+              -webkit-font-smoothing: antialiased;
+              transform: rotate(270deg);
+              position: absolute;
+              right: 0;
+              top: 40%;
+            }
+          }
+        }
+        .link {
+          margin-bottom: 16px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          &:hover,
+          &:global(.active) {
+            color: $primary-aqua;
+          }
+        }
+      }
+    }
+  }
+  .mobile_nav {
+    display: block;
+    @include mq('md') {
+      display: none;
+    }
+    .burger_btn {
+      display: block;
+      border: 0;
+      outline: 0;
+      margin-left: auto;
+      user-select: none;
+    }
+    &_wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      min-height: 100vh;
+      padding: 22px 20px;
+      background-color: $white;
+      display: none;
+      overflow-y: auto;
+      z-index: 999;
+      &:global(.open) {
+        display: block;
+      }
+    }
+    &_header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .close_btn {
+        color: $primary-aqua;
+        font-size: 24px;
+        user-select: none;
+      }
+    }
+    &_content {
+      color: $heading;
+      font-family: Rubik;
+      font-size: 17px;
+      line-height: 28px;
+    }
+    &_back {
+      margin-top: 22px;
+      margin-bottom: 16px;
+      user-select: none;
+    }
+    &_menu {
+      font-family: Fira Sans;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 26px;
+      color: $primary-cerulean;
+      user-select: none;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &_group {
+      margin-bottom: 16px;
+      user-select: none;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &_link {
+      font-weight: 400;
+      font-size: 16px;
+      color: $grey-charcoal;
+      margin-bottom: 16px;
+      user-select: none;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &_breadcrumbs {
+      font-family: Fira Sans;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 31px;
+      color: $primary-cerulean;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      & span {
+        display: block;
+      }
+      & i {
+        transform: rotate(270deg);
+        font-size: 12px;
+        vertical-align: middle;
+        margin: 0 15px 0 12px;
+      }
+    }
+  }
+}

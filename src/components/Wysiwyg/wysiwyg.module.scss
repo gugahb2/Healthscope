@@ -1,0 +1,8 @@
+.wysiwyg {
+  max-width: 700px;
+  margin: auto;
+
+  &.fullWidth {
+    max-width: none;
+  }
+}
